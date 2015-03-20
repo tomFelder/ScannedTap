@@ -1,0 +1,23 @@
+/* display inline for header lists
+
+.header li {
+  display: inline;
+}
+
+float the navbar to centre
+
+.navbar {
+	float-left: auto;
+	float-right: auto;
+}
+
+load shift font example
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+*/
