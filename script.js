@@ -3,7 +3,9 @@ var version = '1.0.0';
 var client = new Sketchfab( version, iframe );
 
 
-var urlid = '7w7pAfrCfjovwykkEeRFLGw5SXS';
+//var urlid = '7w7pAfrCfjovwykkEeRFLGw5SXS';
+
+var urlid = 'bef9ecc8977c49f6a704c401a27433da'
 
 client.init( urlid, {
     success: function onSuccess( api ){
@@ -15,7 +17,6 @@ client.init( urlid, {
     }
 } );
 
-var urlid = '7w7pAfrCfjovwykkEeRFLGw5SXS';
 
 client.init( urlid, {
     success: function onSuccess( api ){ },
