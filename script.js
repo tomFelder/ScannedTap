@@ -8,32 +8,27 @@ var error = function () {
     console.error( 'Error api Sketchfab !' );
 };
 
-console.log('pre api start')
-
 var success = function ( api ) {
 
-    api.start( function () {
-        $( '#start' ).click( function () {
-            api.start();
-        } );
+    var currentCamera = 1;
 
-        $( '#stop' ).click( function () {
-            api.stop();
-        } );
-    } );
+    var loop = function () {
+        currentCamera++;
+        api.lookat( [-1000,-1000,1000],[0,0,0], 0);
+        setTimeout( loop, 0 );
+    }
 
-};
+    api.start( loop );
+
+
 
 console.log('api started - initialising client')
 
-client.init( '6cd4dd83c8f84e098271e8b43330753c', {
-    success: function onSuccess( api ){
-        //API is ready to use
-        api.start();
-    },
-    error: function onError() {
-        console.log( 'Viewer error' );
-    }
+};
+
+client.init( urlid, {
+    success: success,
+    error: error
 } );
     
 console.log('client intialised')    
