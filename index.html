@@ -1,50 +1,98 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-  <head>
-    <title> TAP & SCANN3D </title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js" ></script>
-    <script type="text/javascript" src="sketchfab-viewer-1.0.0.js" ></script>
-    <link href="main.css" rel="stylesheet">
-  </head>
+	<head>
+		<title>TAP & SCANN3D</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		 <script src="http://code.jquery.com/jquery-1.10.1.min.js" ></script>
+		<script type="text/javascript" src="js/sketchfab-viewer-1.0.0.js" ></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body id="top">
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <ul>
-          <li><a href="http://www.tomfrauenfelder.com">TAP</a></li>
-          <li> and </li>
-          <li><a href="http://www.scann3d.com.au">SCANN3D</a></li>
-          <li> have teamed up!</li>
-        </ul>
-      </div>
-      
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="#">TAP</a></h1>
+			</header>
 
-      <div class="body">
-        <div class="preinfo">
-          <h2>This is a test</h2>
-          <p>More information about the test</p>
-        </div>
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h2><a href="http://www.tomfrauenfelder.com">TAP</a> & <a href="http://www.scann3d.com.au">SCANN3D</a></h2>
+					<p class="major">A DANGEROUS COMBINATION</p>
+				</div>
+			</section>
 
-        <div class="iframe">
-          <iframe  id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" height="600px" width="1000px" style="border:none; margin:"> </iframe>
-        </div>
+		<!-- One -->
+			<section id="one" class="wrapper style1">
+				<header class="major">
+					<h2>SketchFab Viewer API Test</h2>
+					<p>This test was designed to determine the flexibility of the SketchFab Viewer API for the purposes of our collaboration </p>
+				</header>
+				<div class="container">
+					<div align="center" class="iframe">
+			          <iframe  id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" height="640px" width="100%" style="border:none; margin:"> </iframe>
+			        </div>
+			        <br>
+					<p style="text-align:center">This test is to be considered arguably successful. Whilst the API holds no ability to manipulate the navigation controls, a hack to persistently reinstate the pre-set camera via a short but smooth animation was implemented. One is able to rotate, zoom or pan away from the camera position but immediately the viewer will take back control and reinstate the original camera which is statically defined but unique cartesian coordinates.</p>
+					<p style="text-align:center">Alternatively with HTML5 we can place an invisible iframe over the SketchFab viewer so the user has no ability to interaction with the viewer. In that circumstance I would argue; "Why bother?". We are using the viewer because it is 3D and without the ability to manipulate and interact with the 3D content the charm of 3D is lost.</p>
+					<p style="text-align:center">In conclusion the former solution, implemented above, allows the user to marginally interact with 3D content. This interaction is heavily restricted to the dollhouse perspective we desire whilst also allowing the user to understand the content is being displayed to them live in 3D. An excellent result for such a limited API. </p>
+				</div>
+			</section>
+			
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u">
+							<div class="row collapse-at-2">
+								<div class="6u">
+									<h3>TAP</h3>
+									<ul class="alt">
+										<li><a href="http://www.tomfrauenfelder.com">Visit Website</a></li>
+										<li><a href="mailto:tom.frauenfelder@gmail.com">Contact</a></li>
+									</ul>
+								</div>
+								<div class="6u">
+									<h3>SCANN3D</h3>
+									<ul class="alt">
+										<li><a href="http://www.scann3d.com.au">Visit Website</a></li>
+										<li><a href="mailto:trent@scann3d.com.au">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="6u">
+							<h2>The Architecture Project</h2>
+							<p>The Architecture Project domain is maintained by Tom Frauenfelder for personal projects. It was once a portfolio website for his architecture students at the RMIT, and it may be again one day. Sometimes it will be live, other times it will not. Who knows what you will fine here at any given moment in time. In the meantime you may learn a little more from the selected social links below.</p>
+							<ul class="icons">
+								<li><a href="https://twitter.com/tomfrauenfelder" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/tom.frauenfelder" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="https://instagram.com/tomfelder/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://www.linkedin.com/profile/view?id=100341117" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<ul class="copyright">
+						<li>&copy; All rights reserved.</li>
+						<li>Design: <a href="http://www.tomfrauenfelder.com">Tom Frauenfelder</a></li>
+						<li>Company: <a href="http://www.tangiblepixel.com">Tangible Pixel</a></li>
+					</ul>
+				</div>
+			</footer>
 
-        <div class="postinfo">
-          <p>Inportant notes on the test and possible suggestions</p>
-        </div>
-      </div>
-
-      <div class="footer">
-        <h3>This is the random footer text where I will explain something</h3>
-      </div>
-    </div>
-
-    <script type="text/javascript" src="script.js" ></script>
-
-  </body>
-
-
-
-
+			<script type="text/javascript" src="js/script.js" ></script>
+	</body>
 </html>
